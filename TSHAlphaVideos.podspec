@@ -9,4 +9,5 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.source           = { :git => "https://github.com/tsheaff/TSHAlphaVideos.git", :tag => s.version.to_s }
   s.source_files     = 'Pod/Classes/*.{h,m,mm,c}'
+  s.frameworks       = 'OpenGLES', 'AVFoundation', 'CoreMedia', 'QuartzCore'
 end

@@ -175,7 +175,7 @@
 
 - (NSURL *)videoURL
 {
-    return [self urlForAlphaVideoOfName:self.rgbVideoFilename];
+    return [[self class] urlForAlphaVideoOfName:self.rgbVideoFilename];
 }
 
 - (CGSize)videoSize
