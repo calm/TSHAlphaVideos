@@ -4,6 +4,16 @@ Play small mp4 videos with alpha background on iOS.  TSHAlphaVideos is powerful,
 
 ![Example 1](http://i.imgur.com/B3MRxj3.gif)
 
+### Installation
+
+If you're on [CocoaPods](https://cocoapods.org/) (which you should be), then add this line to your `Podfile`:
+
+```ruby
+pod 'TSHAlphaVideos'
+```
+
+Otherwise just drag and drop the files from `Pod/Classes` [here](https://github.com/tsheaff/TSHAlphaVideos.git) into your project.
+
 ### Video Processing
 
 You'll want to start with an .mov file that has alpha-channel.  AVPlayer would play this file directly, but doing so would likely require bundling or downloading a very large file -- movs with alpha can often approach 100MB per minute or more.
