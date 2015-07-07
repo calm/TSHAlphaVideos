@@ -14,7 +14,7 @@ pod 'TSHAlphaVideos'
 
 Otherwise just drag and drop the files from [here](https://github.com/tsheaff/TSHAlphaVideos/tree/master/Pod/Classes) into your project.
 
-Either way, you'll also want to get a copy of [alpha_video.rake](https://github.com/tsheaff/TSHAlphaVideos/blob/master/alpha_video.rake) in your rake scope.
+Either way, you'll also want to get a copy of [alpha_video.rake](https://github.com/tsheaff/TSHAlphaVideos/blob/master/alpha_video.rake) in your [rake path](https://github.com/ruby/rake).
 
 ### Video Processing
 
@@ -22,7 +22,7 @@ You'll want to start with an .mov file that has alpha-channel.  AVPlayer would p
 
 Export your .mov premultiplied (matted) from AfterEffects or your video rendering software of choice.
 
-Then, with `alpha_video.rake` in your rake scope, run
+Then, with `alpha_video.rake` in your rake path, run
 
 ```sh
 rake split_mov /path/to/matted/my_awesome_video.mov
