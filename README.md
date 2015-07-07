@@ -12,7 +12,9 @@ If you're on [CocoaPods](https://cocoapods.org/) (which you should be), then add
 pod 'TSHAlphaVideos'
 ```
 
-Otherwise just drag and drop the files from `Pod/Classes` [here](https://github.com/tsheaff/TSHAlphaVideos.git) into your project.
+Otherwise just drag and drop the files from [here](https://github.com/tsheaff/TSHAlphaVideos/tree/master/Pod/Classes) into your project.
+
+Either way, you'll also want to get a copy of [alpha_video.rake](https://github.com/tsheaff/TSHAlphaVideos/blob/master/alpha_video.rake) in your rake scope.
 
 ### Video Processing
 
