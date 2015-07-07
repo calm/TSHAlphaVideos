@@ -4,8 +4,6 @@ Play small mp4 videos with alpha background on iOS.  TSHAlphaVideos is powerful,
 
 ![Example 1](http://i.imgur.com/B3MRxj3.gif)
 
-![Example 2](https://www.dropbox.com/s/34lgz1dhx8d26p8/clinkle-example.gif?dl=0&raw=1)
-
 ### Video Processing
 
 You'll want to start with an .mov file that has alpha-channel.  AVPlayer would play this file directly, but doing so would likely require bundling or downloading a very large file -- movs with alpha can often approach 100MB per minute or more.
