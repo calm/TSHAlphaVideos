@@ -1,7 +1,6 @@
 #import <CoreMedia/CoreMedia.h>
 #import "TSHAlphaVideoController.h"
 #import "TSHAlphaVideoView.h"
-#import "TSHAlphaVideosManager.h"
 
 @interface TSHAlphaVideoController ()
 
@@ -29,13 +28,25 @@
 + (TSHAlphaVideoController *)videoWithRGBVideoFile:(NSString *)rgbVideoFilename
                                      withDelegate:(id<TSHAlphaVideoDelegate>)delegate
 {
-    if (![TSHAlphaVideosManager canPlayVideoOfName:rgbVideoFilename]) {
+    if (![self canPlayVideoOfName:rgbVideoFilename]) {
         return nil;
     }
 
     TSHAlphaVideoController *videoController = [[TSHAlphaVideoController alloc] initWithRGBVideoFile:rgbVideoFilename
                                                                                       withDelegate:delegate];
     return videoController;
+}
+
++ (BOOL)canPlayVideoOfName:(NSString *)name
+{
+    NSURL *url = [self urlForAlphaVideoOfName:name];
+    return url != nil;
+}
+
++ (NSURL *)urlForAlphaVideoOfName:(NSString *)name
+{
+    return [[NSBundle mainBundle] URLForResource:name
+                                   withExtension:kDefaultAlphaVideoFileExtension];
 }
 
 - (void)dealloc
@@ -164,7 +175,7 @@
 
 - (NSURL *)videoURL
 {
-    return [TSHAlphaVideosManager urlForAlphaVideoOfName:self.rgbVideoFilename];
+    return [self urlForAlphaVideoOfName:self.rgbVideoFilename];
 }
 
 - (CGSize)videoSize
