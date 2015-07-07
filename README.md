@@ -2,7 +2,9 @@
 
 Play small mp4 videos with alpha background on iOS.  TSHAlphaVideos is powerful, performant and easy to use.
 
-![Example 1](http://i.imgur.com/B3MRxj3.gif)
+![Example](http://i.imgur.com/B3MRxj3.gif)
+
+This video is 53kb, way smaller than a PNG series or mov.
 
 ### Installation
 
