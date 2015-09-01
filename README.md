@@ -22,7 +22,7 @@ Either way, you'll also want to get a copy of [alpha_video.rake](https://github.
 
 You'll want to start with an .mov file that has alpha-channel.  AVPlayer would play this file directly, but doing so would likely require bundling or downloading a very large file -- movs with alpha can often approach 100MB per minute or more.
 
-Export your .mov premultiplied (matted) from AfterEffects or your video rendering software of choice.
+Export your .mov premultiplied (matted) from AfterEffects or your video rendering software of choice. (In AfterEffects, choose the Animation codes which supports alpha, not H264 or any of the others)
 
 Then, with `alpha_video.rake` in your rake path, run
 
