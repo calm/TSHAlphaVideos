@@ -7,7 +7,7 @@
 @property (nonatomic, copy) NSString *rgbVideoFilename;
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerItemVideoOutput *videoOutput;
-@property (nonatomic, strong) CADisplayLink *displayLink;
+@property (atomic, strong) CADisplayLink *displayLink;
 
 @property (nonatomic, strong) TSHAlphaVideoView *glView;
 
