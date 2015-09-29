@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TSHAlphaVideos"
-  s.version          = "1.0.1"
+  s.version          = "1.1.0"
   s.summary          = "Play mp4 videos with alpha background on iOS"
   s.homepage         = "https://github.com/tsheaff/TSHAlphaVideos"
   s.license          = 'Apache'
