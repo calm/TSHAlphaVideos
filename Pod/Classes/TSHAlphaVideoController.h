@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, TSHAlphaVideoState) {
 
 @property (nonatomic, assign) BOOL repeats;
 @property (nonatomic, assign) BOOL stopInsteadOfPauseWhenViewEntersBackground;
+@property (nonatomic, assign) BOOL shouldStopAggressivelyOnMemoryWarning;
 @property (nonatomic, assign) BOOL disablesIdleTimerWhilePlaying;
 @property (nonatomic, readonly) NSTimeInterval duration;
 @property (nonatomic, readonly) TSHAlphaVideoState state;

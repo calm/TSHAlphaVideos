@@ -68,6 +68,7 @@
         _rgbVideoFilename = [rgbVideoFilename copy];
         _delegate = delegate;
         _targetTime = CMTimeMakeWithSeconds(0.0, NSEC_PER_SEC);
+        _shouldStopAggressivelyOnMemoryWarning = YES;
     }
     return self;
 }
@@ -167,10 +168,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    if ([self.delegate respondsToSelector:@selector(memoryWarningStoppedVideo:)]) {
-        [self.delegate memoryWarningStoppedVideo:self];
+    if (self.shouldStopAggressivelyOnMemoryWarning) {
+        if ([self.delegate respondsToSelector:@selector(memoryWarningStoppedVideo:)]) {
+            [self.delegate memoryWarningStoppedVideo:self];
+        }
+        [self stop];
     }
-    [self stop];
 }
 
 - (NSURL *)videoURL
